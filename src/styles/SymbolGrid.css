@@ -1,0 +1,33 @@
+.SymbolGrid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 40vh;
+  width: 35vw;
+  margin-top: 150px;
+}
+
+.first-row {
+  display: flex;
+  justify-content: center;
+}
+.second-row {
+  display: flex;
+  justify-content: center;
+}
+
+.third-row {
+  display: flex;
+  justify-content: center;
+}
+
+.fourth-row {
+  display: flex;
+  justify-content: center;
+}
+
+.fifth-row {
+  display: flex;
+  justify-content: center;
+}
