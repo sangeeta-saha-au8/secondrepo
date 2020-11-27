@@ -1,4 +1,4 @@
-import { GET_COMMENTS, GET_CURRENT_POST, GET_ALL_POSTS, GET_ISSUES, REGISTER_USER, LOGIN_USER } from "../redux/actionTypes";
+import { GET_CURRENT_POST, GET_ALL_POSTS, REGISTER_USER, LOGIN_USER } from "../redux/actionTypes";
 
 const initialState = {
   users: [],
@@ -14,21 +14,22 @@ const rootReducer = (state = initialState, action) => {
   switch (type) {
     case REGISTER_USER:
       return { ...state, users: [...state.users, payload] };
-    case LOGIN_USER: {
-      console.log(state);
-      let id = state.users.findIndex((user) => {
-        console.log(user.email);
-        console.log(payload.email);
+    case LOGIN_USER:
+      {
+        console.log(state);
+        let id = state.users.findIndex((user) => {
+          console.log(user.email);
+          console.log(payload.email);
 
-        return user.email === payload.email;
-      });
+          return user.email === payload.email;
+        });
 
-      if (id !== -1) {
-        console.log("found user");
-        return { ...state, currentUser: payload };
+        if (id !== -1) {
+          console.log("found user");
+          return { ...state, currentUser: payload };
+        }
       }
-    }
-
+      break;
     case GET_ALL_POSTS:
       //console.log("1", payload, state);
       // let posts10 = payload.filter(function (post) {
