@@ -13,7 +13,7 @@ class Page1 extends Component {
     return (
       <div>
         <h1> Page1 </h1>
-        <div>Posts will be displayed here </div>
+        <div>Posts will be displayed  </div>
         <Search />
         <div>
           {this.props.posts === null ? (
